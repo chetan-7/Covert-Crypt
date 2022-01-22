@@ -24,6 +24,9 @@
                                 <div class="collapse navbar-collapse" id="navbarNav">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
+                                            <a class="nav-link"><p id="userid"></p></a>
+                                        </li>
+                                        <li class="nav-item">
                                             <a class="nav-link" onclick="logout()" href="index.php">Log Out</a>
                                         </li>
                                     </ul>
@@ -99,20 +102,26 @@
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/plugins/grid-gallery/js/grid-gallery.min.js"></script>
-    <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
     <script src="assets/js/script.js"></script>
     <script type="text/javascript">
+        function displayOnTop(email){
+            document.getElementById("userid").innerHTML="Welcome,"+email.split('@')[0]+"!";
+        }
         window.onload=function(){
-            var user=firebase.auth().currentUser;
-            if(user==null){
-                alert("Access denied");
-                window.location="index.php";
-            }
-            /*else{
-                window.location="home.php";
-                setTimeout(10000);
-            }*/
+            /*var user=firebase.auth().currentUser;
+            console.log("User info "+user);*/
+            firebase.auth().onAuthStateChanged(function(user){
+                if(user){
+                    console.log("User signed in");
+                    console.log(user.uid);
+                    console.log(user.email);
+                    displayOnTop(user.email);
+                }
+                else{
+                    alert("Accesss denied");
+                    window.location="index.php";
+                }
+            });
         }
     </script>
 </html>
