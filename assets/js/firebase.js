@@ -127,4 +127,5 @@ function codeverify() {
 
 function logout(){
   firebase.auth().signOut();
+  window.location="index.php";//21012022
 }

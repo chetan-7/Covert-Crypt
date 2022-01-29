@@ -24,10 +24,10 @@
                                 <div class="collapse navbar-collapse" id="navbarNav">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
-                                            <a class="nav-link"><p id="userid"></p></a>
+                                            <a class="nav-link" style="color:white"><p id="userid"></p></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" onclick="logout()" href="index.php">Log Out</a>
+                                            <a class="nav-link" style="color:white" onclick="logout()" href="index.php">Log Out</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -41,11 +41,9 @@
     <div class="slider-detail">
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
+            <!--<ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-
-            </ol>
+            </ol>-->
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="d-block slide-img w-100" src="assets/images/slider/med.jpg" height="660px" alt="First slide" filter="blur(8px)">
@@ -54,7 +52,9 @@
                         <p class="bounceInLeft" id="b1"></p>
 
                         <div class="vbh">
-                          <input type="text" id="namebox" placeholder="File name...."><br>
+                           <div class="input-container">
+                                <input type="text" id="namebox" placeholder="Input.."><br>
+                           </div>
                            <button class="btn btn-success bounceInUp" id="select">Select
                             </button>
                             <button class="btn btn-success bounceInUp" id="upload">Upload
