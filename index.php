@@ -16,9 +16,9 @@
                 <button type="button" class="toggle-btn" onclick="register()">Register</button>
             </div>
             <div class="social-icons">
-                <img src="https://cdn3.iconfinder.com/data/icons/round-pink-icons-set/256/social_media_round_icons_pink_color_set_256x256_0000_facebook.png">
-                <img src="https://webstockreview.net/images/pink-twitter-png-7.png">
-                <img src="https://www.seekpng.com/png/detail/1010-10103813_facebook-icon-new-instagram-png-black.png">
+                <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Facebook_svg-1024.png">
+                <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Twitter5_svg-1024.png">
+                <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Instagram_svg-1024.png">
             </div>
             <form method="POST" id="login_div" class="input-group">
                 <input type="email" class="input-field" id="email_field" name="email" placeholder="User Id" required>
@@ -27,7 +27,7 @@
            		<div>
                 	<input type="checkbox" class="chech-box"><span>Remember me</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                	<a href="reset.php" class="forget-pass"><span style="color:red;">Forgot password?<span></a>
+                	<a href="reset.php" class="forget-pass"><span style="color:#092f79;">Forgot password?<span></a>
                 </div>	 
                 <button onclick="signIn()"  type="submit" formtarget="_blank" style="color:white;"class="submit-btn">Sign In</button>     
             </form>

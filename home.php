@@ -41,12 +41,9 @@
     <div class="slider-detail">
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <!--<ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            </ol>-->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block slide-img w-100" src="assets/images/slider/med.jpg" height="660px" alt="First slide" filter="blur(8px)">
+                    <img class="d-block slide-img w-100" src="assets/images/slider/home.jpeg" height="660px" alt="First slide" filter="blur(8px)">
                     <div class="carousel-caption vdg-cur d-none d-md-block">
                         <h5 class="bounceInDown">Covert Crypt</h5>
                         <p class="bounceInLeft" id="b1"></p>
@@ -59,8 +56,8 @@
                             </button>
                             <button class="btn btn-success bounceInUp" id="upload">Upload
                             </button>
-                            <button id="retrieve" class="btn btn-success bounceInUp">Retrieve</button><br>
-                            <a id="myfile" download></a><br><label id="UpProgress"></label><br>
+                            <button id="retrieve" class="btn btn-success bounceInUp">Retrieve</button><br><br>
+                            <a id="myfile" download style="color:white;font-weight:bold;"></a><br><label id="UpProgress"></label><br>
                         </div>
                     </div>
                 </div>
@@ -80,7 +77,7 @@
             <div class="row">
                 <div class="col-md-6 text">
                     <h2>About</h2>
-                    <p style="font-size: 20px;font-family:'Lucida Console','Courier New', monospace; ">Welcome to Covert Crypt secure file storage////. 
+                    <p style="font-size: 20px;font-family:'Lucida Console','Courier New', monospace; ">Welcome to Covert Crypt secure file storage. 
                     </p>
                 </div>
                 <!--<div class="col-md-6 image">
@@ -97,12 +94,12 @@
 
   <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
   <script type="text/javascript" src="assets/js/secret.js"></script>
-  <script src="assets/js/storage.js"></script>
     <script src="assets/js/firebase.js"></script>
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/storage.js"></script>
     <script type="text/javascript">
         function displayOnTop(email){
             document.getElementById("userid").innerHTML="Welcome,"+email.split('@')[0]+"!";
@@ -112,10 +109,11 @@
             console.log("User info "+user);*/
             firebase.auth().onAuthStateChanged(function(user){
                 if(user){
+                    displayOnTop(user.email);
+                    setter_user(user.email);
                     console.log("User signed in");
                     console.log(user.uid);
                     console.log(user.email);
-                    displayOnTop(user.email);
                 }
                 else{
                     alert("Accesss denied");
@@ -124,4 +122,5 @@
             });
         }
     </script>
+
 </html>

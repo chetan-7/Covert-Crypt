@@ -478,7 +478,7 @@ footer {
 .hero{
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://cdn.pixabay.com/photo/2020/05/07/18/25/tech-5142625_960_720.jpg'); 
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F001%2F338%2F720%2Foriginal%2Fblue-cyber-circuit-future-technology-background-vector.jpg&f=1&nofb=1'); 
   /*background-color: #1a1a1a;*/
   background-position: center;
   background-size: cover;
@@ -514,7 +514,7 @@ footer {
   position: absolute;
   width: 110px;
   height: 100%;
-  background: linear-gradient(to right,#ff105f,#ffad06);
+  background: linear-gradient(to right,#00d7ff,#1900ff);
   border-radius: 30px;
   transition: .5s;
 }
@@ -552,8 +552,9 @@ footer {
   cursor: pointer;
   display: block;
   margin: auto;
-  background-color: #de1f26;
+  background-color: #092f79;
   border: 0;
+  font-size: 15px;
   outline: none;
   border-radius: 30px;
 }
